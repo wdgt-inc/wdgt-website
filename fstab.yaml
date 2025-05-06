@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p10681-e1547661.adobeaemcloud.com/bin/franklin.delivery/wdgt-inc/wdgt-website/main"
+    url: "https://author-p10681-e1629944.adobeaemcloud.com/bin/franklin.delivery/wdgt-inc/wdgt-website/main"
     type: "markup"
     suffix: ".html"
