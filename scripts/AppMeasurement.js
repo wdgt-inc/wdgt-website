@@ -27,7 +27,7 @@ var s_account = "geo1xxlonwdgt-production";
 var s=s_gi(s_account);
 
 // Make sure data is sent to the correct tracking server
-s.trackingServer = "example.data.adobedc.net";
+s.trackingServer = "wdgt.sc.omtrdc.net";
 
 function AppMeasurement_Module_ActivityMap(k){function p(){var a=f.pageYOffset+(f.innerHeight||0);a&&a>+g&&(g=a)}function q(){if(e.scrollReachSelector){var a=k.d.querySelector&&k.d.querySelector(e.scrollReachSelector);a?(g=a.scrollTop||0,a.addEventListener("scroll",function(){var d;(d=a&&a.scrollTop+a.clientHeight||0)>g&&(g=d)})):0<v--&&setTimeout(q,1E3)}}function l(a,d){var b,c,n;if(a&&d&&(b=e.c[d]||(e.c[d]=d.split(","))))for(n=0;n<b.length&&(c=b[n++]);)if(-1<a.indexOf(c))return null;return a}function r(a,
   d,b,c,e){var f,h;if(a.dataset&&(h=a.dataset[d]))f=h;else if(a.getAttribute)if(h=a.getAttribute("data-"+b))f=h;else if(h=a.getAttribute(b))f=h;if(!f&&k.useForcedLinkTracking&&e){var g;a=a.onclick?""+a.onclick:"";d="";if(c&&a&&(b=a.indexOf(c),0<=b)){for(b+=c.length;b<a.length;)if(h=a.charAt(b++),0<="'\"".indexOf(h)){g=h;break}for(var l=!1;b<a.length&&g;){h=a.charAt(b);if(!l&&h===g)break;"\\"===h?l=!0:(d+=h,l=!1);b++}}(g=d)&&(k.w[c]=g)}return f||e&&k.w[c]}function s(a,d,b){var c;return(c=e[d](a,b))&&
