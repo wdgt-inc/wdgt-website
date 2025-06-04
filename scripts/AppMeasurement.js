@@ -23,7 +23,7 @@
  Implementation guide: https://adobe.ly/3UddQ2L
 */
 // Instantiate the Analytics tracking object with report suite ID
-var s_account = "examplersid";
+var s_account = "geo1xxlonwdgt-production";
 var s=s_gi(s_account);
 
 // Make sure data is sent to the correct tracking server
