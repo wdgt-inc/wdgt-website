@@ -25,6 +25,14 @@
 // Instantiate the Analytics tracking object with report suite ID
 var s_account = "geo1xxlonwdgt-production";
 var s=s_gi(s_account);
+s.usePlugins = true;
+
+// Given the URL https://example.com/?cid=trackingcode
+// Sets the campaign variable to "trackingcode"
+function s_doPlugins(s){
+  s.campaign = s.Util.getQueryParam('cid');
+}
+s.doPlugins = s_doPlugins;
 
 // Make sure data is sent to the correct tracking server
 s.trackingServer = "wdgt.sc.omtrdc.net";
