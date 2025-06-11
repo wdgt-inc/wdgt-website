@@ -6,9 +6,34 @@
 <link rel="stylesheet" href="/styles/styles.css"/>
 <script language="JavaScript" type="text/javascript">
   s.pageName = window.document.title;
-  s.eVar1 = window.location.hostname + window.location.pathname;
+  s.eVar1 = "Page Name";
+  s.eVar3 = "Previous Page URL";
+  s.eVar5 = "CTA Clicked";
+  s.eVar7 = "Form:Industry";
+  s.eVar8 = "Form:Region";
   s.events = "event1";
   s.t();
   const s_code = s.t();
   if(s_code)document.write(s_code);
+
+
+  $(document).ready(function() {
+    $('#aht_btn').click(function() {
+      $.ajax({
+        type: "GET",
+        url: "show_aht2.php",
+        data: {}, // do I need to pass data if im GET ting?
+        dataType: 'json',
+        success: function(data) {
+          //doing stuff
+          //end success
+        },
+        always: function() {
+          //submit form !!!
+          $("#formtopost").submit();
+        }
+      });
+    });
+  });
+
 </script>
