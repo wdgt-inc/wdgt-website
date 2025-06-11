@@ -10,17 +10,22 @@
   s.eVar3 = document.referrer;
   s.events = "event1";
   //s.t();
- document.form.addEventListener("submit", function (e) {
+ const formElem = document.querySelector("form");
+
+ // submit handler
+
+ formElem.addEventListener("submit", (e) => {
+   // on form submission, prevent default
    e.preventDefault();
 
-   var formData = new FormData(e);
-   // output as an object
-   console.log(Object.fromEntries(formData));
+   console.log(formElem.querySelector('input[name="field1"]')); // FOO
+   console.log(formElem.querySelector('input[name="field2"]')); // BAR
 
-   // ...or iterate through the name-value pairs
-   for (var pair of formData.entries()) {
-     console.log(pair[0] + ": " + pair[1]);
-   }
+   // construct a FormData object, which fires the formdata event
+   const formData = new FormData(formElem);
+   // formdata gets modified by the formdata event
+   console.log(formData.get("field1")); // foo
+   console.log(formData.get("field2")); // bar
  });
   const s_code = s.t();
   if(s_code)document.write(s_code);
