@@ -15,25 +15,4 @@
   s.t();
   const s_code = s.t();
   if(s_code)document.write(s_code);
-
-
-  $(document).ready(function() {
-    $('#aht_btn').click(function() {
-      $.ajax({
-        type: "GET",
-        url: "show_aht2.php",
-        data: {}, // do I need to pass data if im GET ting?
-        dataType: 'json',
-        success: function(data) {
-          //doing stuff
-          //end success
-        },
-        always: function() {
-          //submit form !!!
-          $("#formtopost").submit();
-        }
-      });
-    });
-  });
-
 </script>
