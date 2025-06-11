@@ -10,6 +10,18 @@
   s.eVar3 = document.referrer;
   s.events = "event1";
   //s.t();
+ document.querySelector("form").addEventListener("submit", function (e) {
+   e.preventDefault();
+
+   var formData = new FormData(e);
+   // output as an object
+   console.log(Object.fromEntries(formData));
+
+   // ...or iterate through the name-value pairs
+   for (var pair of formData.entries()) {
+     console.log(pair[0] + ": " + pair[1]);
+   }
+ });
   const s_code = s.t();
   if(s_code)document.write(s_code);
 </script>
