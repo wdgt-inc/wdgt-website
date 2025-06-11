@@ -6,11 +6,9 @@
 <link rel="stylesheet" href="/styles/styles.css"/>
 <script language="JavaScript" type="text/javascript">
   s.pageName = window.document.title;
-  s.eVar1 = "Page Name";
-
-
+  s.eVar1 = window.location.hostname + window.location.pathname;
   s.events = "event1";
-  s.t();
+  //s.t();
   const s_code = s.t();
   if(s_code)document.write(s_code);
 </script>
