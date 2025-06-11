@@ -9,8 +9,13 @@
   s.eVar1 = window.location.hostname + window.location.pathname;
   s.eVar3 = document.referrer;
   s.events = "event1";
+  var form = false;
+  var length = document.forms.length;
+  if(length == 1) {
+     form = document.forms[0];
+  }
   //s.t();
- document.getElementById("L2NvbnRlbnQvd2RndC1pbmMvaW5kZXgvamNyOmNvbnRlbnQvcm9vdC9zZWN0aW9uXzg3NzY3MzM2MC9mb3Jt").addEventListener("submit", function (e) {
+ form.addEventListener("submit", function (e) {
    e.preventDefault();
 
    var formData = new FormData(e);
