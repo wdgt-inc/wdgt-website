@@ -1,32 +1,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<script>
+
+</script>
 <script src="/scripts/aem.js" type="module"></script>
 <script src="/scripts/scripts.js" type="module"></script>
 <script src="/scripts/VisitorAPI.js"></script>
 <script src="/scripts/AppMeasurement.js"></script>
 <link rel="stylesheet" href="/styles/styles.css"/>
+
 <script language="JavaScript" type="text/javascript">
+
+  (function() {
+    // your page initialization code here
+    // the DOM will be available here
+    console.log( "ready!" );
+    const ele = document.getElementById('register-your-interest-in-future-wdgt-services');
+    console.log(ele);
+
+  })();
+
+ /*
+  const button = document.getElementById('submit-1995604559');
+  button.addEventListener("click", (event) => {
+  button.textContent = `Click count: ${event.detail}`;
+  });
+  */
+
  // s.pageName = window.document.title;
   s.eVar1 = window.location.hostname + window.location.pathname;
   s.eVar3 = document.referrer;
   s.events = "event1";
   //s.t();
- const formElem = document.querySelector('form');
-
  // submit handler
 
- formElem.addEventListener("submit", (e) => {
-   // on form submission, prevent default
-   e.preventDefault();
 
-   console.log(formElem.querySelector('input[name="industry"]')); // FOO
-   console.log(formElem.querySelector('input[name="region"]')); // BAR
 
-   // construct a FormData object, which fires the formdata event
-   const formData = new FormData(formElem);
-   // formdata gets modified by the formdata event
-   console.log(formData.get("industry")); // foo
-   console.log(formData.get("region")); // bar
- });
   const s_code = s.t();
   if(s_code)document.write(s_code);
 </script>
