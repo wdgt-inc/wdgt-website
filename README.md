@@ -1,9 +1,9 @@
-# Your Project's Title...
-Your project's description...
+# WDGT Website
+Main website for WDGT
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Preview: https://main--wdgt-website--wdgt-inc.aem.page/
+- Live: https://main--wdgt-website--wdgt-inc.aem.live/
 
 ## Documentation
 
